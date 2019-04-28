@@ -7,9 +7,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Horis - Teacher Hour Management',
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+       primarySwatch: Colors.green,
       ),
       home: MyHomePage(title: 'Horis'),
     );
@@ -26,14 +26,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
+  
   @override
   Widget build(BuildContext context) {
      return Scaffold(
@@ -41,28 +34,15 @@ class _MyHomePageState extends State<MyHomePage> {
          title: Text(widget.title),
       ),
       body: Center(
-         child: Column(
-         mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
-            SizedBox(
-              child: RaisedButton(
-                onPressed: (){},
-                child: Text ("Aperte Aqui")
-              )
-            )
-          ],
+         child: 
+         Image.asset(
+           "assets/images/timer.png",
+           fit: BoxFit.fitWidth,
+           height: 200.0,)
         ),
-      ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        onPressed: (){},
+        tooltip: 'Registrar Aula',
         child: Icon(Icons.add),
       ),
       );
