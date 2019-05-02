@@ -4,5 +4,4 @@ class Teacher {
   String email;
 
   
-
 }
