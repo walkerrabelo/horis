@@ -33,13 +33,24 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
          title: Text(widget.title),
       ),
-      body: Center(
+      body: PageView(
+        
+        children: <Widget>[
+          Center(
          child: 
          Image.asset(
            "assets/images/timer.png",
            fit: BoxFit.fitWidth,
            height: 200.0,)
         ),
+        Container(
+          color: Colors.blue,
+        ),
+        Container(
+          color: Colors.red,
+        )
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
         tooltip: 'Registrar Aula',
